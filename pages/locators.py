@@ -1,4 +1,10 @@
 from selenium.webdriver.common.by import By
+from .base_page import BasePage
+from selenium import webdriver
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
 class MainPageLocators():
