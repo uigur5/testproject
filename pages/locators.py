@@ -1,10 +1,11 @@
 from selenium.webdriver.common.by import By
-from .base_page import BasePage
+
 from selenium import webdriver
 
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_BUTTON = (By.CSS_SELECTOR, "div.basket-mini > span > a")
 
 
 class MainPageLocators():
@@ -22,3 +23,8 @@ class ProductPageLocators():
     MESSAGE_PRODUCT_IN_BASKET = (By.CSS_SELECTOR, "div.alertinner strong")
     PRODUCT_NAME = (By.CSS_SELECTOR, "div.product_main h1")
     MESSAGE_PRICE_OF_BASKET = (By.CSS_SELECTOR,".alert-info .alertinner strong")
+
+
+class BasketPageLocators():
+    NO_ITEMS_TEXT = (By.CSS_SELECTOR, "#content_inner p")
+    BASKET_ITEMS = (By.CSS_SELECTOR, "#basket_formset")
